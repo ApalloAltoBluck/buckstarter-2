@@ -47,4 +47,4 @@ gatsby new gatsby-starter-bootstrap-5 https://github.com/r-ichard/gatsby-starter
 
 ## 💡 How to contribute 
 
-Any feedback is welcome and helpful.
+Any feedback is welcome and helpful.# buckstarter-2
