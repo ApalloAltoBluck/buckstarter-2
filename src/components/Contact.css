@@ -1,0 +1,17 @@
+.contact{
+    display:flex;
+}
+input{
+    width:60vw;
+    margin-bottom:.5em;
+}
+#message{
+    height:4em;
+}
+.contact p{
+    text-align:left;
+}
+.conatct button{
+    justify-content:right;
+    padding-bottom:3em;
+}

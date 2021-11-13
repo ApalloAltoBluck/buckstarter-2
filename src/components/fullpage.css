@@ -235,3 +235,42 @@ html.fp-enabled,
     white-space: nowrap;
     border: 0;
 }
+.page{
+    font-family: calibri, sans-serif bold black;
+    font-size:1.5em;
+}
+.page:nth-child(4){
+    margin-bottom:5em;
+    margin-top:0;
+}
+.page button{
+    background-color: black;
+    color:white;
+}
+.brandingimages{
+    display: flex;
+    margin-top:3em;
+    margin-bottom:4em;
+}
+.thework{
+    margin:2em;
+    margin-left:5em;
+    margin-right:5em;
+}
+.clients{
+    display:flex;
+    flex-flow: row nowrap;
+    margin:2em;
+}
+.clients .row{
+    display:flex;
+    justify-content:space-between;
+}
+.meet-scott{
+    background-image: url(../images/scott-bkg.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    /* color:white; */
+}
