@@ -11,6 +11,8 @@ import Contact from "../components/Contact"
 import Seo from "../components/seo"
 import "../components/fullpage.css";
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link>
+
 
 function IndexPage() {
 
@@ -74,19 +76,37 @@ function IndexPage() {
               <h3>Simplicity, Clarity, Allure.</h3>
               <div className="clients">
                 <div className="row">
+                  <div className="col-sm">
                 <img src="../images/bnc.jpeg" alt="Black News Channel"></img>
+                  </div>
+                  <div className="col-sm">
                 <img src="../images/siggi.jpeg" alt="Siggi's"></img>
+                  </div>
+                  <div className="col-sm">
                 <img src="../images/naturlich.png" alt="Naturlich yogurt"></img>
+                  </div>
                 </div>{/*end of row*/}
                 <div className="row">
+                  <div className="col-sm">
                 <img src="../images/dagostino" alt="D'agostino Law PLLC"></img>
+                </div>
+                  <div className="col-sm">
                 <img src="../images/upcycle.png" alt="upcycle"></img>
+                </div>
+                  <div className="col-sm">
                 <img src="../images/internationalCopper.png" alt="International Copper"></img>
+                </div>
                 </div>{/*end of row*/}
                 <div className="row">
+                  <div className="col-sm">
                 <img src="../images/miamiDadeCounty.jpeg" alt="Miami Dade County"></img>
+                  </div>
+                  <div className="col-sm">
                 <img src="../images/crowdster.jpeg" alt="Crowdster"></img>
+                  </div>
+                  <div className="col-sm">
                 <img src="../images/waterGarden.png" alt="Water Garden"></img>
+                  </div>
                 </div>{/*end of row*/}
               </div>{/*end of clients*/}
               <button>
