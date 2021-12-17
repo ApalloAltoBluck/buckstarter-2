@@ -19,7 +19,7 @@ function IndexPage() {
   return (
   <Layout>
     
-    <Seo title="Home" />
+    <Seo title="Buckstarter" />
     <section className="py-5 text-center container">
         <ReactFullpage
     //fullpage options
@@ -31,44 +31,44 @@ function IndexPage() {
         <ReactFullpage.Wrapper>
 
           <div className="section">
-            <div className="page">
+            <div className="page First">
             <p><b>Buckstarter helps get brands moving. We give businesses stronger points-of-view and bigger presences in the marketplace, so they become more effective. We deliver deep branding experience in a more efficient operating model we call a “branding studio” rather than an “advertising agency”.</b></p>
             {/* <button onClick={() => fullpageApi.moveSectionDown()}>
               Click me to move down
             </button> */}
             <button>
-              Sizzle Reel
+              SIZZLE REEL
             </button>
             </div>
           </div>
           {/* Next page */}
           <div className="section">
-            <div className="page">
+            <div className="page Second">
               <h2>We organize around your needs.</h2>
               <div className="brandingimages">
                 <figure>
-                  <img src="../images/innovation.png" alt="Buckstarter innovation"></img>
+                  <StaticImage src="../images/innovation.png" alt="Buckstarter innovation" />
                   <figcaption>Strategy, Design, Architecture, Purpose</figcaption>
                 </figure>
                 <figure>
-                  <img src="../images/branding.png" alt="Buckstarter branding"></img>
+                  <StaticImage src="../images/branding.png" alt="Buckstarter branding" />
                   <figcaption>Content production: digital, video, print, ultra-efficent</figcaption>
                 </figure>
                 <figure>
-                  <img src="../images/production.png" alt="Buckstarter production"></img>
+                  <StaticImage src="../images/production.png" alt="Buckstarter production" />
                   <figcaption>Brand narrative, advertising content</figcaption>
                 </figure>
               </div>
             </div>
           </div>
           <div className="section">
-            <div className="page">
-              <h2>We operate as a "hive"</h2>
+            <div className="page Third">
+              <h2><b>We operate as a "hive"</b></h2><br /><br />
               <p>As a branding studio, we relentlessly focus on the end- product: the quality of the output. We cherry-pick the best designers, strategists, creative directors, media planners or buyers, producers, or directors needed to get the job done well. We "swarm" just the right talent around the brand. And we work fast, with little to no waste.</p>
             </div>
           </div>
           <div className="section">
-            <div className="page">
+            <div className="page Fourth">
               <div className="thework">
               <h2>The Work</h2>
               <p>Why should a brand exist? What purpose does it serve? Where is its heat? This is a craft of careful identification and distillation. Our work shares three common principles:</p>
@@ -77,51 +77,76 @@ function IndexPage() {
               <div className="clients">
                 <div className="row">
                   <div className="col-sm">
-                <img src="../images/bnc.jpeg" alt="Black News Channel"></img>
+                <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"   />
                   </div>
                   <div className="col-sm">
-                <img src="../images/siggi.jpeg" alt="Siggi's"></img>
+                <StaticImage src="../images/siggi.jpeg" alt="Siggi's"   />
                   </div>
                   <div className="col-sm">
-                <img src="../images/naturlich.png" alt="Naturlich yogurt"></img>
+                <StaticImage src="../images/naturlich.png" alt="Naturlich yogurt"   />
                   </div>
                 </div>{/*end of row*/}
                 <div className="row">
                   <div className="col-sm">
-                <img src="../images/dagostino" alt="D'agostino Law PLLC"></img>
+                <StaticImage src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"   />
                 </div>
                   <div className="col-sm">
-                <img src="../images/upcycle.png" alt="upcycle"></img>
+                <StaticImage src="../images/upcycle.png" alt="upcycle"   />
                 </div>
                   <div className="col-sm">
-                <img src="../images/internationalCopper.png" alt="International Copper"></img>
+                <StaticImage src="../images/internationalCopper.png" alt="International Copper"   />
                 </div>
                 </div>{/*end of row*/}
                 <div className="row">
                   <div className="col-sm">
-                <img src="../images/miamiDadeCounty.jpeg" alt="Miami Dade County"></img>
+                <StaticImage src="../images/miamiDadeCounty.jpeg" alt="Miami Dade County"   />
                   </div>
                   <div className="col-sm">
-                <img src="../images/crowdster.jpeg" alt="Crowdster"></img>
+                <StaticImage src="../images/crowdster.jpeg" alt="Crowdster"   />
                   </div>
                   <div className="col-sm">
-                <img src="../images/waterGarden.png" alt="Water Garden"></img>
+                <StaticImage src="../images/waterGarden.png" alt="Water Garden"   />
                   </div>
                 </div>{/*end of row*/}
               </div>{/*end of clients*/}
-              <button>
+              {/* <button>
                 Case Studies
-              </button>
+              </button> */}
             </div>{/*end of page*/}
           </div>{/*end of section*/}
           <div className="section">
-          <div className="page">
-            <div className="meet-scott">
-              <h2>Meet Scott</h2>
-              <img src="../images/scott.jpeg" alt="Scott"></img>
+          <div className="page Fith">
+
+          {/* <div style={{ display: "grid" }}>
+            <StaticImage style={{ gridArea: "1/1",
+            // You can set a maximum height for the image, if you wish.
+             maxHeight: 600, }} layout="fullWidth"
+            // You can optionally force an aspect ratio for the generated image
+            aspectRatio={3 / 1}
+            // This is a presentational image, so the alt should be an empty string
+            alt="" src={"../images/scott-bkg.png"} formats={["auto", "webp", "avif"]}
+            />
+            <div style={{ gridArea: "1/1", position: "relative", placeItems: "center",display: "grid",}}>
+            <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp"/>
               <p>Founder of Bluckstarter LLC</p>
-              <img src="../images/linkedin.png" alt="Linkedin"></img>
-              </div>{/*end of meet-scott*/}
+              <StaticImage src="../images/linkedin.png" alt="Linkedin" width={50} height={50}/>
+              </div>
+            </div> */}
+
+            
+            <div>
+              <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp"/>
+              <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp"/>
+            </div>
+
+            {/* <div className="meet-scott">
+              <h2>Meet Scott</h2>
+              <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp"/>
+              <p>Founder of Bluckstarter LLC</p>
+              <StaticImage src="../images/linkedin.png" alt="Linkedin" width={50} height={50}/>
+              </div> */}
+
+
             </div>{/*end of page*/}
           </div>{/*end of section*/}
           <div className="section">
