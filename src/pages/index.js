@@ -1,6 +1,11 @@
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React, {useCallback} from "react"
+import 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+
 
 import ReactFullpage from '@fullpage/react-fullpage';
 
@@ -75,39 +80,18 @@ function IndexPage() {
               </div>
               <h3>Simplicity, Clarity, Allure.</h3>
               <div className="clients">
-                <div className="row">
-                  <div className="col-sm">
-                <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"   />
-                  </div>
-                  <div className="col-sm">
-                <StaticImage src="../images/siggi.jpeg" alt="Siggi's"   />
-                  </div>
-                  <div className="col-sm">
-                <StaticImage src="../images/naturlich.png" alt="Naturlich yogurt"   />
-                  </div>
-                </div>{/*end of row*/}
-                <div className="row">
-                  <div className="col-sm">
-                <StaticImage src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"   />
-                </div>
-                  <div className="col-sm">
-                <StaticImage src="../images/upcycle.png" alt="upcycle"   />
-                </div>
-                  <div className="col-sm">
-                <StaticImage src="../images/internationalCopper.png" alt="International Copper"   />
-                </div>
-                </div>{/*end of row*/}
-                <div className="row">
-                  <div className="col-sm">
-                <StaticImage src="../images/miamiDadeCounty.jpeg" alt="Miami Dade County"   />
-                  </div>
-                  <div className="col-sm">
-                <StaticImage src="../images/crowdster.jpeg" alt="Crowdster"   />
-                  </div>
-                  <div className="col-sm">
-                <StaticImage src="../images/waterGarden.png" alt="Water Garden"   />
-                  </div>
-                </div>{/*end of row*/}
+              <Container fluid="md">
+                <Row>
+                  <Col>                
+                    <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo" />
+                    <StaticImage src="../images/siggi.jpeg" alt="Siggi's"  className="clientLogo" />
+                    <StaticImage src="../images/naturlich.png" alt="Naturlich yogurt" className="clientLogo"  />
+                    <StaticImage src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"  className="clientLogo" />
+                  </Col>
+                </Row>
+              </Container>
+
+
               </div>{/*end of clients*/}
               {/* <button>
                 Case Studies
@@ -117,26 +101,11 @@ function IndexPage() {
           <div className="section">
           <div className="page Fith">
 
-          {/* <div style={{ display: "grid" }}>
-            <StaticImage style={{ gridArea: "1/1",
-            // You can set a maximum height for the image, if you wish.
-             maxHeight: 600, }} layout="fullWidth"
-            // You can optionally force an aspect ratio for the generated image
-            aspectRatio={3 / 1}
-            // This is a presentational image, so the alt should be an empty string
-            alt="" src={"../images/scott-bkg.png"} formats={["auto", "webp", "avif"]}
-            />
-            <div style={{ gridArea: "1/1", position: "relative", placeItems: "center",display: "grid",}}>
-            <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp"/>
-              <p>Founder of Bluckstarter LLC</p>
-              <StaticImage src="../images/linkedin.png" alt="Linkedin" width={50} height={50}/>
+            <div id="scottBkgDiv">
+              <StaticImage src="../images/scott-bkg.png" alt="Scott" id="scottBkg"/>
+              <div id="scottPfp">
+                <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp"/>
               </div>
-            </div> */}
-
-            
-            <div>
-              <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp"/>
-              <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp"/>
             </div>
 
             {/* <div className="meet-scott">
@@ -150,27 +119,42 @@ function IndexPage() {
             </div>{/*end of page*/}
           </div>{/*end of section*/}
           <div className="section">
-            <div className="page">
+            <div className="page Sixth">
               <h2>Get in contact</h2>
               <p>Thanks for visiting. We'd love to hear from you. Better yet, we'd love to work with you. Use the form below and we will quickly get back to you. Let's get started!</p>
               <Contact />
             </div>
           </div>
-          {/* <div className="section">
-            <div className="page">
-              <p>case studies</p>
+          <div className="section">
+            <div className="page Seventh">
+              <h2>Case Studies</h2>
+              <Container fluid="md">
+                <Row>
+                  <Col>                
+                    <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo" />
+                    <StaticImage src="../images/siggi.jpeg" alt="Siggi's"  className="clientLogo" />
+                    <StaticImage src="../images/naturlich.png" alt="Naturlich yogurt" className="clientLogo"  />
+                    <StaticImage src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"  className="clientLogo" />
+                    <StaticImage src="../images/upcycle.png" alt="upcycle"  className="clientLogo" />
+                    <StaticImage src="../images/InternationalCopper.png" alt="International Copper"  className="clientLogo" />
+                    <StaticImage src="../images/miamiDadeCounty.jpeg" alt="Miami Dade County"  className="clientLogo" />
+                    <StaticImage src="../images/crowdster.jpeg" alt="Crowdster"  className="clientLogo" />
+                    <StaticImage src="../images/waterGarden.png" alt="Water Garden"  className="clientLogo" />
+                  </Col>
+                </Row>
+              </Container>
             </div>
           </div>
           <div className="section">
-            <div className="page">
-              <p>client spotlight</p>
+            <div className="page Eighth">
+              <div className="clientSpotlight">
+                <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo" />
+              </div>
+              <h2>Client Spotlight:Black News Channel</h2>
+              <p>Gone are the days of 'rip & read' unbiased mainstrem news reporting. Today, news is interpreted, rewritten and "spun" to the prevailing taste of a specific audience. So, in partnership with Carol H Williams Advertising, Buckstarter created the new logo for the first-ever 24-hour cable news platform dedicated to black news, the Black News Channel. Inspired by the positive impacts Black culture has had on mainstream culture, the "Illuminating Suns" imagery drives home our guiding principle that mainstream news should not treat the news of the AA community as invisible. Rather it should shine a light on a positive new day forward.</p>
             </div>
           </div>
-          <div className="section">
-            <div className="page">
-              <p>We are bluckstarter: sizzle reel</p>
-            </div>
-          </div> */}
+          
         </ReactFullpage.Wrapper>
       );
     }}
