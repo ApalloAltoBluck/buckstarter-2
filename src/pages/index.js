@@ -37,7 +37,7 @@ function IndexPage() {
 
           <div className="section">
             <div className="page First">
-            <p><b>Buckstarter helps get brands moving. We give businesses stronger points-of-view and bigger presences in the marketplace, so they become more effective. We deliver deep branding experience in a more efficient operating model we call a “branding studio” rather than an “advertising agency”.</b></p>
+            <p>Buckstarter helps get brands moving. We give businesses stronger points-of-view and bigger presences in the marketplace, so they become more effective. We deliver deep branding experience in a more efficient operating model we call a “branding studio” rather than an “advertising agency”.</p>
             {/* <button onClick={() => fullpageApi.moveSectionDown()}>
               Click me to move down
             </button> */}
@@ -152,6 +152,15 @@ function IndexPage() {
               </div>
               <h2>Client Spotlight:Black News Channel</h2>
               <p>Gone are the days of 'rip & read' unbiased mainstrem news reporting. Today, news is interpreted, rewritten and "spun" to the prevailing taste of a specific audience. So, in partnership with Carol H Williams Advertising, Buckstarter created the new logo for the first-ever 24-hour cable news platform dedicated to black news, the Black News Channel. Inspired by the positive impacts Black culture has had on mainstream culture, the "Illuminating Suns" imagery drives home our guiding principle that mainstream news should not treat the news of the AA community as invisible. Rather it should shine a light on a positive new day forward.</p>
+            </div>
+          </div>
+          <div className="section">
+            <div className="page Nine">
+              <div id="reel">
+                <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo" />
+              </div>
+              <h2>We are Buckstarter: Sizzle reel</h2>
+              <p>As a branding studio, we relentlessly focous on the end-product: the quality of the output. We cherry-pick the best designers, strategists, creative directors, media planners or buyers, producers, or directors needed to get the job done well. We "swarm" just the right talent around the brand. And we work fast, with little to no waste.</p>
             </div>
           </div>
           
