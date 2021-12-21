@@ -236,7 +236,7 @@ html.fp-enabled,
     border: 0;
 }
 .page{
-    font-family: calibri, sans-serif bold black;
+    font-family: 'Raleway', Regular 400;
     font-size:1.5em;
 }
 .page:nth-child(4){
@@ -257,23 +257,11 @@ html.fp-enabled,
     margin-left:5em;
     margin-right:5em;
 }
-.clients img{
+.clientLogo{
     max-width:180px !important;
     max-height:180px !important;
+    margin:1em;
 }
-/* .meet-scott{
-    background-image: url(../images/scott-bkg.png);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: top;
-}
-#pfp{
-    max-width:280px;
-    max-height:280px;
-    border-radius:50%;
-    margin:auto;
-} */
 
 .py-5.text-center.container{
     height:100vh !important;
@@ -281,10 +269,6 @@ html.fp-enabled,
 }
 .fp-tableCell{
     display:contents !important;
-    /* margin-left:20vw !important;
-    margin-right:20vw !important; */
-    /* border-style: solid !important;
-    border-color: coral !important; */
     margin-top:10vh !important;
 }
 .page{
@@ -311,4 +295,43 @@ html.fp-enabled,
     padding-right: 3.5vw !important;
     padding-top:25vh !important;
     font-size:2em;
+}
+.Fith{
+    padding:0em;
+}
+.Seventh{
+    padding:0em;
+    margin-top:10vh;
+}
+#scottBkg{
+    width:100vw;
+    height:100vh;
+}
+#pfp{
+    /* position:relative;
+    top:33%;
+    left:33%;
+    width:33%;
+    height:33%; */
+}
+#scottBkgDiv{
+    width:100vw;
+    height:100vh;
+}
+#scottPfp{
+    position:absolute;
+    top:35vh;
+    left:35vw;
+
+    width:200px;
+    height:200px;
+}
+#reel{
+    margin-top:0em;
+    background-color: #888;
+    width:100%;
+    height:50vh;
+}
+.Nine{
+    padding:0em;
 }
