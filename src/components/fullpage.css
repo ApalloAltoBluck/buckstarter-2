@@ -246,12 +246,45 @@ html.fp-enabled,
 .page button{
     background-color: black;
     color:white;
+    border-radius: 20px;
 }
 .brandingimages{
     display: flex;
-    margin-top:3em;
+    /* align-items: center; */
+    /* margin-top:3em; */
     margin-bottom:4em;
+    flex-wrap: wrap;
+    align-items: center;
+
 }
+.brandingimages figure{
+    align-items: center;
+}
+@media (orientation:landscape){
+    .brandingimages figure{
+        width:33%;
+    }
+    @media screen and (max-width: 1000px){
+        .brandingimages figure{
+            height:23vh;
+            width:60vw;
+        }
+        .brandingimages figure img{
+            height:20vh;
+        }
+    }
+}
+@media (orientation:portrait){
+    .brandingimages figure{
+        height:23vh;
+        width:60vw;
+    }
+    .brandingimages figure img{
+        height:20vh;
+    }
+}
+
+
 .thework{
     margin:2em;
     margin-left:5em;
