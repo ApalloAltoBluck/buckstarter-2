@@ -244,8 +244,12 @@ html.fp-enabled,
     margin-top:0;
 }
 .page button{
-    background-color: black;
-    color:white;
+    border-radius:3px;
+    background-color: white;
+    color:black;
+    padding:8px;
+    font-size:2vmin;
+    font-weight:600;
     border-radius: 20px;
 }
 .brandingimages{
@@ -367,4 +371,31 @@ html.fp-enabled,
 }
 .Nine{
     padding:0em;
+}
+
+.slide-1-image {
+    max-width:35vmax;
+    min-width:30vmax;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.text-style-1 {
+    font-size: 4vmin;
+
+}
+
+.bm-burger-bars {
+    height:2px;
+}
+
+.bm-menu {
+    background: white;
+}
+
+.bm-item-list a {
+    color:black !important;
+    text-transform:uppercase;
+    font-weight:600;
+
 }

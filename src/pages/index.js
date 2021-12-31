@@ -16,10 +16,10 @@ import Contact from "../components/Contact"
 import Seo from "../components/seo"
 import "../components/fullpage.css";
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link>
 
 
 function IndexPage() {
+
 
   return (
   <Layout>
@@ -34,16 +34,27 @@ function IndexPage() {
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-
           <div className="section">
+          <div className="page First">
+            <p>welcome to</p>
+            {/* <button onClick={() => fullpageApi.moveSectionDown()}>
+              Click me to move down
+            </button> */}
+            <img className="slide-1-image" src={'buckstarter.png'} />
+            </div>
+          </div>
+          <div className="section">
+            
             <div className="page First">
-            <p>Buckstarter helps get brands moving. We give businesses stronger points-of-view and bigger presences in the marketplace, so they become more effective. We deliver deep branding experience in a more efficient operating model we call a “branding studio” rather than an “advertising agency”.</p>
+            <p className="text-style-1">Buckstarter helps get brands moving. We give businesses stronger points-of-view and bigger presences in the marketplace, so they become more effective. We deliver deep branding experience in a more efficient operating model we call a “branding studio” rather than an “advertising agency”.</p>
             {/* <button onClick={() => fullpageApi.moveSectionDown()}>
               Click me to move down
             </button> */}
             <button>
               SIZZLE REEL
             </button>
+            {console.log()}
+
             </div>
           </div>
           {/* Next page */}
@@ -69,14 +80,14 @@ function IndexPage() {
           <div className="section">
             <div className="page Third">
               <h2><b>We operate as a "hive"</b></h2><br /><br />
-              <p>As a branding studio, we relentlessly focus on the end- product: the quality of the output. We cherry-pick the best designers, strategists, creative directors, media planners or buyers, producers, or directors needed to get the job done well. We "swarm" just the right talent around the brand. And we work fast, with little to no waste.</p>
+              <p className="text-style-1">As a branding studio, we relentlessly focus on the end- product: the quality of the output. We cherry-pick the best designers, strategists, creative directors, media planners or buyers, producers, or directors needed to get the job done well. We "swarm" just the right talent around the brand. And we work fast, with little to no waste.</p>
             </div>
           </div>
           <div className="section">
             <div className="page Fourth">
               <div className="thework">
               <h2>The Work</h2>
-              <p>Why should a brand exist? What purpose does it serve? Where is its heat? This is a craft of careful identification and distillation. Our work shares three common principles:</p>
+              <p className="text-style-1">Why should a brand exist? What purpose does it serve? Where is its heat? This is a craft of careful identification and distillation. Our work shares three common principles:</p>
               </div>
               <h3>Simplicity, Clarity, Allure.</h3>
               <div className="clients">
@@ -171,13 +182,7 @@ function IndexPage() {
       <div className="row py-lg-5">
         <div className="col-lg-6 col-md-8 mx-auto">
           <h1 className="fw-light">Hello world ! </h1>
-          <p className="lead text-muted"> Welcome to this Boostrap 5 Gatsby Starter</p>
-          <div id="fullpage">
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
-	<div class="section">Some section</div>
-</div>
+
 
      
           <StaticImage
