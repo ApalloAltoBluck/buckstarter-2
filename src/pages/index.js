@@ -2,11 +2,12 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import 'react-bootstrap';
-import { Container } from 'react-bootstrap';
+import { Container, Component } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 
-import Popup from "../components/PopUp.js"; 
+import Popup from 'reactjs-popup';
+// import Popup from "../components/PopUp.js"; 
 
 import ReactFullpage from '@fullpage/react-fullpage';
 
@@ -18,34 +19,13 @@ import Contact from "../components/Contact"
 import Seo from "../components/seo"
 import "../components/fullpage.css";
 
-// function handleClick(event) {
-//   const modal = document.querySelector(".modal")
-//   const closeBtn = document.querySelector(".close")
-//   modal.style.display = "block";
-//   closeBtn.addEventListener("click", () => {
-//     modal.style.display = "none";
-//   })
-// }
-
-// document.addEventListener("DOMContentLoaded",() => {
-//   const the_button = document.querySelector(".js-btn")
-//   the_button.addEventListener("click", handleClick)
-// })
-
 function IndexPage( state ) {
-  // state = {
-  //   seen: false
-  // };
-  // togglePop = () => {
-  //   this.setState({
-  //    seen: !this.state.seen
-  //   });
-  //  };
+
   const [isOpen, setIsOpen] = useState(false);
 
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  }
+  const imageClick = () => {
+    console.log('Click');
+  } 
 
   return (
   <Layout>
@@ -120,16 +100,7 @@ function IndexPage( state ) {
               <Container fluid="md">
                 <Row>
                   <Col>                
-                    <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo" />
-                    <div>
-                      <input type="button" value="Click to Open Popup" onClick={togglePopup}/>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> 
-                      {isOpen && <Popup content={
-                        <> 
-                          <b>Design your Popup</b><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                          <button>Test button</button>
-                        </>}handleClose={togglePopup}/>}
-                    </div>
+                    <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo"  onClick={() => imageClick()} />
                     <StaticImage src="../images/siggi.jpeg" alt="Siggi's"  className="clientLogo" />
                     <StaticImage src="../images/naturlich.png" alt="Naturlich yogurt" className="clientLogo"  />
                     <StaticImage src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"  className="clientLogo" />
