@@ -7,7 +7,7 @@ import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 
 import Popup from 'reactjs-popup';
-// import Popup from "../components/PopUp.js"; 
+// import * as PopUp from "../components/PopUp.js"; 
 
 import ReactFullpage from '@fullpage/react-fullpage';
 
@@ -107,18 +107,54 @@ function IndexPage( state ) {
                   </Col>
                 </Row>
               </Container>
-                {/* <div class="modal">
-                  <div class="modal_content">
-                    <span class="close">&times;</span>
-                    <CaseStudy path="../images/bnc.jpeg" title="BNC" about="this is a very intersting company"/>
-                  </div>
-                </div> */}
-              {/* <CaseStudy path="../images/bnc.jpeg" title="BNC" about="this is a very intersting company"/> */}
-
+              <Popup
+    trigger={<button className="button"> Open Modal </button>}
+    modal
+    nested
+  >
+    {close => (
+      <div className="modal">
+        <button className="close" onClick={close}>
+          &times;
+        </button>
+        <div className="header"> Modal Title </div>
+        <div className="content">
+          {' '}
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
+          Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
+          delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?
+          <br />
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sit
+          commodi beatae optio voluptatum sed eius cumque, delectus saepe repudiandae
+          explicabo nemo nam libero ad, doloribus, voluptas rem alias. Vitae?
+        </div>
+        <div className="actions">
+          <Popup
+            trigger={<button className="button"> Trigger </button>}
+            position="top center"
+            nested
+          >
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+              magni omnis delectus nemo, maxime molestiae dolorem numquam
+              mollitia, voluptate ea, accusamus excepturi deleniti ratione
+              sapiente! Laudantium, aperiam doloribus. Odit, aut.
+            </span>
+          </Popup>
+          <button
+            className="button"
+            onClick={() => {
+              console.log('modal closed ');
+              close();
+            }}
+          >
+            close modal
+          </button>
+        </div>
+      </div>
+    )}
+  </Popup>
               </div>{/*end of clients*/}
-              {/* <button>
-                Case Studies
-              </button> */}
             </div>{/*end of page*/}
           </div>{/*end of section*/}
           <div className="section">
