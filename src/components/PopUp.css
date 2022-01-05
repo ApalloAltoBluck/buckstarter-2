@@ -2,7 +2,7 @@
     background-color:white;
     margin-left:10vw;
     margin-right:10vw;
-    margin-top:15vh;
+    margin-top:5vh;
     margin-bottom:15vh;
 }
 #closeButton{
@@ -14,4 +14,12 @@
     text-align: center;
     border: 1px solid #999;
     font-size: 20px;
+}
+#top{
+    background-color:grey;
+    margin-top:2em;
+    height:50vh;
+}
+#logo{
+    
 }

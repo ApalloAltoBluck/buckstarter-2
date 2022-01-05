@@ -5,8 +5,16 @@ import 'react-bootstrap';
 import { Container, Component } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
+import Figure from 'react-bootstrap/Figure'
+import FigureImage from 'react-bootstrap/FigureImage'
+import FigureCaption from 'react-bootstrap/FigureCaption'
 
 import PopupWindow from '../components/PopUp.js';
+
+import BNCPopupWindow from '../components/BNCpopup.js';
+import SIGPopupWindow from '../components/SIGpopup.js';
+import NATPopupWindow from '../components/NATpopup.js';
+import DAGPopupWindow from '../components/DAGpopup.js';
 import Popup from 'reactjs-popup';
 // import * as PopUp from "../components/PopUp.js"; 
 
@@ -20,8 +28,23 @@ import Contact from "../components/Contact"
 import Seo from "../components/seo"
 import "../components/fullpage.css";
 
+
+// let CSname;
+// let CSdescription;
+function SetPopup (props){
+  console.log('clicked');
+  // let CSname = {props.title};
+  // let CSdescription = {props.description};
+  // console.log(CSname);
+  // CSname = "BNC image clicked";
+  // CSdescription = "BNC images clicked (description)";
+  // console.log(CSname);
+  // console.log(CSdescription);
+}
+
 function IndexPage( state ) {
 
+  
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -101,15 +124,40 @@ function IndexPage( state ) {
               <div className="clients">
               <Container fluid="md">
                 <Row>
-                  <Col>                
-                    <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo"  onClick={() => imageClick()} />
-                    <StaticImage src="../images/siggi.jpeg" alt="Siggi's"  className="clientLogo" />
-                    <StaticImage src="../images/naturlich.png" alt="Naturlich yogurt" className="clientLogo"  />
-                    <StaticImage src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"  className="clientLogo" />
+                  <Col>       
+                  {/* onClick={() => onClick()}          */}
+                  <Figure>
+                    <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo"   />
+                    <Figure.Caption>
+                      <BNCPopupWindow />
+                    </Figure.Caption>
+                  </Figure>
+                  <Figure>
+                  <StaticImage src="../images/siggi.jpeg" alt="Siggi's"  className="clientLogo" />
+                    <Figure.Caption>
+                      <SIGPopupWindow />
+                    </Figure.Caption>
+                  </Figure>
+                  <Figure>
+                  <StaticImage src="../images/naturlich.png" alt="Naturlich yogurt" className="clientLogo"  />
+                    <Figure.Caption>
+                      <NATPopupWindow />
+                    </Figure.Caption>
+                  </Figure>
+                  <Figure>
+                  <StaticImage src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"  className="clientLogo" />
+                    <Figure.Caption>
+                      <DAGPopupWindow />
+                    </Figure.Caption>
+                  </Figure>
+                    {/* <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo"   /> */}
+                    {/* <StaticImage src="../images/siggi.jpeg" alt="Siggi's"  className="clientLogo" /> */}
+                    {/* <StaticImage src="../images/naturlich.png" alt="Naturlich yogurt" className="clientLogo"  /> */}
+                    {/* <StaticImage src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"  className="clientLogo" /> */}
                   </Col>
                 </Row>
               </Container>
-              <PopupWindow />
+              {/* <PopupWindow /> */}
               </div>{/*end of clients*/}
             </div>{/*end of page*/}
           </div>{/*end of section*/}
@@ -186,8 +234,6 @@ function IndexPage( state ) {
       <div className="row py-lg-5">
         <div className="col-lg-6 col-md-8 mx-auto">
           <h1 className="fw-light">Hello world ! </h1>
-
-
      
           <StaticImage
             src="../images/gatsby-astronaut.png"

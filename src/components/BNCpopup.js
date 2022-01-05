@@ -3,7 +3,7 @@ import React from 'react'
 import ReactCircleModal from 'react-circle-modal'
 import "../components/PopUp.css";
 
-const PopupWindow = (props) => {
+const BNCPopupWindow = () => {
   return (
     <ReactCircleModal
         backgroundColor="#FFF"
@@ -26,7 +26,7 @@ const PopupWindow = (props) => {
               <StaticImage id="logo" src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo" />
               </div>
               <div id="bottom">
-                  <h2 id="Name">title: {props.title}</h2>
+                  <h2 id="Name">title: </h2>
                   <p id="description">This is a short ish description of what BNC News is...</p>
               </div>
           </div>
@@ -37,4 +37,4 @@ const PopupWindow = (props) => {
   )
 }
 
-export default PopupWindow
+export default BNCPopupWindow
