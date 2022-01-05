@@ -25,7 +25,7 @@ const SIGPopupWindow = () => {
               <div id="top">
               <StaticImage src="../images/siggi.jpeg" alt="Siggi's"  className="clientLogo" />              </div>
               <div id="bottom">
-                  <h2 id="Name">title: </h2>
+                  <h2 id="Name">Siggi's </h2>
                   <p id="description">This is a short ish description of what BNC News is...</p>
               </div>
           </div>

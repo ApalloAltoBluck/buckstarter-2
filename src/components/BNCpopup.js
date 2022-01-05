@@ -26,7 +26,7 @@ const BNCPopupWindow = () => {
               <StaticImage id="logo" src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo" />
               </div>
               <div id="bottom">
-                  <h2 id="Name">title: </h2>
+                  <h2 id="Name">Black News channel</h2>
                   <p id="description">This is a short ish description of what BNC News is...</p>
               </div>
           </div>

@@ -25,7 +25,7 @@ const DAGPopupWindow = () => {
               <div id="top">
               <StaticImage src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"  className="clientLogo" />              </div>
               <div id="bottom">
-                  <h2 id="Name">title:</h2>
+                  <h2 id="Name">D'Agostino Law</h2>
                   <p id="description">This is a short ish description of what BNC News is...</p>
               </div>
           </div>
