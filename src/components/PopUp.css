@@ -1,0 +1,17 @@
+#popupWindow{
+    background-color:white;
+    margin-left:10vw;
+    margin-right:10vw;
+    margin-top:15vh;
+    margin-bottom:15vh;
+}
+#closeButton{
+    float: right;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #999;
+    font-size: 20px;
+}
