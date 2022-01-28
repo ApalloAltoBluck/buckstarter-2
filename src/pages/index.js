@@ -66,22 +66,23 @@ function IndexPage( state ) {
       return (
         <ReactFullpage.Wrapper>
           <div className="section">
-          <div className="page First">
+          <div className="page Opening">
+          <span class="helper"></span>
             <p>welcome to</p>
             {/* <button onClick={() => fullpageApi.moveSectionDown()}>
               Click me to move down
             </button> */}
-            <img className="slide-1-image" src={'buckstarter.png'} />
+              <img className="slide-1-image" src={'buckstarter.png'} />
             </div>
           </div>
           <div className="section">
             
-            <div className="page First">
+            <div className="First">
             <p className="text-style-1">Buckstarter helps get brands moving. We give businesses stronger points-of-view and bigger presences in the marketplace, so they become more effective. We deliver deep branding experience in a more efficient operating model we call a “branding studio” rather than an “advertising agency”.</p>
             {/* <button onClick={() => fullpageApi.moveSectionDown()}>
               Click me to move down
             </button> */}
-            <button>
+            <button className='button1'>
               SIZZLE REEL
             </button>
             {console.log()}
@@ -91,26 +92,28 @@ function IndexPage( state ) {
           {/* Next page */}
           <div className="section">
             <div className="page Second">
-              <h2>We organize around your needs.</h2>
-              <div className="brandingimages">
-                <figure>
-                  <StaticImage src="../images/innovation.png" alt="Buckstarter innovation" />
-                  <figcaption>Strategy, Design, Architecture, Purpose</figcaption>
-                </figure>
-                <figure>
-                  <StaticImage src="../images/branding.png" alt="Buckstarter branding" />
-                  <figcaption>Content production: digital, video, print, ultra-efficent</figcaption>
-                </figure>
-                <figure>
-                  <StaticImage src="../images/production.png" alt="Buckstarter production" />
-                  <figcaption>Brand narrative, advertising content</figcaption>
-                </figure>
+              <h2 className="header">We organize around your needs.</h2>
+              <div class="brandingimages-conatiner">
+                <div className="brandingimages">
+                  <figure>
+                    <StaticImage src="../images/innovation.png" alt="Buckstarter innovation" className=""/>
+                    <figcaption>Strategy, Design, Architecture, Purpose</figcaption>
+                  </figure>
+                  <figure>
+                    <StaticImage src="../images/branding.png" alt="Buckstarter branding" />
+                    <figcaption>Content production: digital, video, print, ultra-efficent</figcaption>
+                  </figure>
+                  <figure>
+                    <StaticImage src="../images/production.png" alt="Buckstarter production" />
+                    <figcaption>Brand narrative, advertising content</figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
           </div>
           <div className="section">
             <div className="page Third">
-              <h2><b>We operate as a "hive"</b></h2><br /><br />
+              <h2 className="header"><b>We operate as a "hive"</b></h2><br /><br />
               <p className="text-style-1">As a branding studio, we relentlessly focus on the end- product: the quality of the output. We cherry-pick the best designers, strategists, creative directors, media planners or buyers, producers, or directors needed to get the job done well. We "swarm" just the right talent around the brand. And we work fast, with little to no waste.</p>
             </div>
           </div>
@@ -162,12 +165,11 @@ function IndexPage( state ) {
             </div>{/*end of page*/}
           </div>{/*end of section*/}
           <div className="section">
-          <div className="page Fith">
+          <div className=" Fith">
 
             <div id="scottBkgDiv">
-              <StaticImage src="../images/scott-bkg.png" alt="Scott" id="scottBkg"/>
               <div id="scottPfp">
-                <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp"/>
+                <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp" className="imageround"/>
               </div>
             </div>
 

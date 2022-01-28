@@ -1,5 +1,7 @@
 .contact{
     display:flex;
+    justify-content: center;
+    align-items:center;
 }
 input{
     width:60vw;
@@ -11,7 +13,7 @@ input{
 .contact p{
     text-align:left;
 }
-.conatct button{
-    justify-content:right;
+.contact button{
+    justify-content:center;
     padding-bottom:3em;
 }
