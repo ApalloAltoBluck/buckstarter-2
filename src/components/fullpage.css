@@ -460,18 +460,7 @@ html.fp-enabled,
     border: 1px solid #999;
     font-size: 20px;
   }
-  .button1{
-      border: 2px solid grey;
-      background-color: black;
-      color: white;
-      padding: 1.2vh 3vw;
-      text-align: center;
-      display: inline-block;
-      font-size: 30px;
-      margin: 20px 2px;
-      cursor: pointer;
-      font-weight: bold;
-  }
+
   .header{
       font-size: 3vw;
   }

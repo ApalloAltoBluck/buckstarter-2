@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import 'react-bootstrap';
 import { Container, Component } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
@@ -8,13 +8,19 @@ import { Col } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure'
 import FigureImage from 'react-bootstrap/FigureImage'
 import FigureCaption from 'react-bootstrap/FigureCaption'
+import Burger from "../components/burger"
 
 import PopupWindow from '../components/PopUp.js';
 
-import BNCPopupWindow from '../components/BNCpopup.js';
+import HomeSlide from  "../components/slides/1homeslide"
+import AboutBS from "../components/slides/2aboutslide"
+import Service from "../components/slides/3serviceslide"
+import HiveSlide from "../components/slides/4hiveslide"
+import TheWork from "../components/slides/5thework"
+import AboutScott from "../components/slides/6aboutscott"
+import ContactSlide from "../components/slides/7contactslide"
+
 import SIGPopupWindow from '../components/SIGpopup.js';
-import NATPopupWindow from '../components/NATpopup.js';
-import DAGPopupWindow from '../components/DAGpopup.js';
 import Popup from 'reactjs-popup';
 // import * as PopUp from "../components/PopUp.js"; 
 
@@ -29,23 +35,21 @@ import Seo from "../components/seo"
 import "../components/fullpage.css";
 
 
-// let CSname;
-// let CSdescription;
-function SetPopup (props){
-  console.log('clicked');
-  // let CSname = {props.title};
-  // let CSdescription = {props.description};
-  // console.log(CSname);
-  // CSname = "BNC image clicked";
-  // CSdescription = "BNC images clicked (description)";
-  // console.log(CSname);
-  // console.log(CSdescription);
+const Header = () => {
+  return (
+    <div className="static w-full">
+    <img className=" mx-auto w-1/5 md:w-1/12 z-10" src={'/logo.jpg'} />
+    <Burger right/>
+
+    </div>
+
+  )
 }
 
-function IndexPage( state ) {
 
-  
+function IndexPage(props ) {
 
+  const [firstPage, setFirstPage] = useState();
   const [isOpen, setIsOpen] = useState(false);
 
   const imageClick = () => {
@@ -54,142 +58,26 @@ function IndexPage( state ) {
 
   return (
   <Layout>
-    
+    <Header isFirstPage={isOpen}></Header>
     <Seo title="Buckstarter" />
     <section className="py-5 text-center container">
         <ReactFullpage
     //fullpage options
     licenseKey = {'YOUR_KEY_HERE'}
     scrollingSpeed = {1000} /* Options here */
-
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-          <div className="section">
-          <div className="page Opening">
-          <span class="helper"></span>
-            <p>welcome to</p>
-            {/* <button onClick={() => fullpageApi.moveSectionDown()}>
-              Click me to move down
-            </button> */}
-              <img className="slide-1-image" src={'buckstarter.png'} />
-            </div>
-          </div>
-          <div className="section">
-            
-            <div className="First">
-            <p className="text-style-1">Buckstarter helps get brands moving. We give businesses stronger points-of-view and bigger presences in the marketplace, so they become more effective. We deliver deep branding experience in a more efficient operating model we call a “branding studio” rather than an “advertising agency”.</p>
-            {/* <button onClick={() => fullpageApi.moveSectionDown()}>
-              Click me to move down
-            </button> */}
-            <button className='button1'>
-              SIZZLE REEL
-            </button>
-            {console.log()}
+          <HomeSlide className="section" />
+          <AboutBS  className="section"/>
+          <Service  className="section"/>
+          <HiveSlide className="section" />
+          <TheWork />
+          <AboutScott className="section" />
+          <ContactSlide />
+        
 
-            </div>
-          </div>
-          {/* Next page */}
-          <div className="section">
-            <div className="page Second">
-              <h2 className="header">We organize around your needs.</h2>
-              <div class="brandingimages-conatiner">
-                <div className="brandingimages">
-                  <figure>
-                    <StaticImage src="../images/innovation.png" alt="Buckstarter innovation" className=""/>
-                    <figcaption>Strategy, Design, Architecture, Purpose</figcaption>
-                  </figure>
-                  <figure>
-                    <StaticImage src="../images/branding.png" alt="Buckstarter branding" />
-                    <figcaption>Content production: digital, video, print, ultra-efficent</figcaption>
-                  </figure>
-                  <figure>
-                    <StaticImage src="../images/production.png" alt="Buckstarter production" />
-                    <figcaption>Brand narrative, advertising content</figcaption>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="section">
-            <div className="page Third">
-              <h2 className="header"><b>We operate as a "hive"</b></h2><br /><br />
-              <p className="text-style-1">As a branding studio, we relentlessly focus on the end- product: the quality of the output. We cherry-pick the best designers, strategists, creative directors, media planners or buyers, producers, or directors needed to get the job done well. We "swarm" just the right talent around the brand. And we work fast, with little to no waste.</p>
-            </div>
-          </div>
-          <div className="section">
-            <div className="page Fourth">
-              <div className="thework">
-              <h2>The Work</h2>
-              <p className="text-style-1">Why should a brand exist? What purpose does it serve? Where is its heat? This is a craft of careful identification and distillation. Our work shares three common principles:</p>
-              </div>
-              <h3>Simplicity, Clarity, Allure.</h3>
-              <div className="clients">
-              <Container fluid="md">
-                <Row>
-                  <Col>       
-                  {/* onClick={() => onClick()}          */}
-                  <Figure>
-                    <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo"   />
-                    <Figure.Caption>
-                      <BNCPopupWindow />
-                    </Figure.Caption>
-                  </Figure>
-                  <Figure>
-                  <StaticImage src="../images/siggi.jpeg" alt="Siggi's"  className="clientLogo" />
-                    <Figure.Caption>
-                      <SIGPopupWindow />
-                    </Figure.Caption>
-                  </Figure>
-                  <Figure>
-                  <StaticImage src="../images/naturlich.png" alt="Naturlich yogurt" className="clientLogo"  />
-                    <Figure.Caption>
-                      <NATPopupWindow />
-                    </Figure.Caption>
-                  </Figure>
-                  <Figure>
-                  <StaticImage src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"  className="clientLogo" />
-                    <Figure.Caption>
-                      <DAGPopupWindow />
-                    </Figure.Caption>
-                  </Figure>
-                    {/* <StaticImage src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo"   /> */}
-                    {/* <StaticImage src="../images/siggi.jpeg" alt="Siggi's"  className="clientLogo" /> */}
-                    {/* <StaticImage src="../images/naturlich.png" alt="Naturlich yogurt" className="clientLogo"  /> */}
-                    {/* <StaticImage src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"  className="clientLogo" /> */}
-                  </Col>
-                </Row>
-              </Container>
-              {/* <PopupWindow /> */}
-              </div>{/*end of clients*/}
-            </div>{/*end of page*/}
-          </div>{/*end of section*/}
-          <div className="section">
-          <div className=" Fith">
-
-            <div id="scottBkgDiv">
-              <div id="scottPfp">
-                <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp" className="imageround"/>
-              </div>
-            </div>
-
-            {/* <div className="meet-scott">
-              <h2>Meet Scott</h2>
-              <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp"/>
-              <p>Founder of Bluckstarter LLC</p>
-              <StaticImage src="../images/linkedin.png" alt="Linkedin" width={50} height={50}/>
-              </div> */}
-
-
-            </div>{/*end of page*/}
-          </div>{/*end of section*/}
-          <div className="section">
-            <div className="page Sixth">
-              <h2>Get in contact</h2>
-              <p>Thanks for visiting. We'd love to hear from you. Better yet, we'd love to work with you. Use the form below and we will quickly get back to you. Let's get started!</p>
-              <Contact />
-            </div>
-          </div>
+          
           <div className="section">
             <div className="page Seventh">
               <h2>Case Studies</h2>

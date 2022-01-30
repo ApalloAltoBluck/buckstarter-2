@@ -2,8 +2,8 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Burger from "./burger.js"
 import "./layout.scss"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
   return (
     // <div className="container-fluid p-0">
     <>
-      <Burger right/>
       <main >
         <main>{children}</main>
       </main>

@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Authentic Sans';
+    src: url('./fonts/AUTHENTICSans-90.woff2');
+    font-weight:90;
+}
+
+@font-face {
+    font-family: 'Authentic Sans';
+    src: url('./fonts/AUTHENTICSans-130.woff2');
+    font-weight:130;
+}
+
+@font-face {
+    font-family: 'Authentic Sans';
+    src: url('./fonts/AUTHENTICSans-150.woff2');
+    font-weight:150;
+}
+
+* {
+    font-family: 'Authentic Sans' !important;
+}
+h1 {
+    font-family: 'Authentic Sans';
+    font-weight: 130 !important;
+}
+
+p {
+    font-weight:90;
+}
