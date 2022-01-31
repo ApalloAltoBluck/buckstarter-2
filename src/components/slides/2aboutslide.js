@@ -5,7 +5,7 @@ import ReactCircleModal from 'react-circle-modal'
 const AboutBS = () => {
     return (  
     <div className="section">     
-    <div className="pt-32 mx-5 md:pt-64">
+    <div className="pt-32 mx-5 md:pt-64 lg:pt-40" >
     <p className="text-xl leading-loose md:text-3xl md:leading-loose lg:text-4xl lg:leading-loose">Buckstarter helps get brands moving. We give businesses stronger points-of-view and bigger presences in the marketplace, so they become more effective. We deliver deep branding experience in a more efficient operating model we call a “branding studio” rather than an “advertising agency”.</p>
     {/* <button onClick={() => fullpageApi.moveSectionDown()}>
       Click me to move down
