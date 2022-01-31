@@ -1,9 +1,35 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react'
-import ReactCircleModal from 'react-circle-modal'
 
-const TheWork = () => {
-    return (  
+import { useState } from 'react';
+const Client = (props) => {
+  return (
+    <>
+      <div onClick={() => {props.setClient(props.client); props.fullpageApi.moveSectionDown() }}className="w-32 m-3 h-32 bg-black"></div>
+    </>
+  )
+}
+
+const ClientPopup = (props) => {
+  
+  return (props.client && <div className="container">
+    <div className="section" >
+          <div id="bottom">
+              <img src={props.client.image}/>
+              <h2 id="Name">title: {props.client.title} </h2>
+              <p id="description">{props.client.description}</p>
+      </div>
+    </div></div>)
+    }
+
+
+
+const TheWork = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [client, setClient] = useState(null);
+
+    return (  <>
         <div className="section container">
             <div className="page Fourth">
               <div className="">
@@ -12,9 +38,9 @@ const TheWork = () => {
               </div>
               <h3>Simplicity, Clarity, Allure.</h3>
               <div className="clients">
-                  <figure>
-                    <img src="../images/bnc.jpeg" alt="Black News Channel"  className="clientLogo"   />
-                  </figure>
+                <Client fullpageApi={props.fullpageApi} setClient={setClient} setIsOpen={setIsOpen} client={{title: "siggis", description: "I love Siggis Yogurt", image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2018%2F03%2Fdenzel-curry-knotty-head-rick-ross-remix-000.jpg?w=960&cbr=1&q=90&fit=max"}}/>
+                <Client fullpageApi={props.fullpageApi} setClient={setClient} setIsOpen={setIsOpen} client={{title: "DAG", description: "I love DAG", image: "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2018%2F03%2Fdenzel-curry-knotty-head-rick-ross-remix-000.jpg?w=960&cbr=1&q=90&fit=max"}}/>
+
                   <figure>
                   <img src="../images/siggi.jpeg" alt="Siggi's"  className="clientLogo" />
                   </figure>
@@ -24,8 +50,11 @@ const TheWork = () => {
                   <figure>
                   <img src="../images/dagostino.jpeg" alt="D'agostino Law PLLC"  className="clientLogo" />
                   </figure>
-              {/* <PopupWindow /> */}
+              
               </div>{/*end of clients*/}
             </div>{/*end of page*/}
-          </div>) }
+          </div>
+          {client &&
+          <ClientPopup setTriggered={setIsOpen} client={client}/>}
+</>) }
 export default TheWork

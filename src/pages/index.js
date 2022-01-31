@@ -72,7 +72,7 @@ function IndexPage(props) {
           <AboutBS  className="section"/>
           <Service  className="section"/>
           <HiveSlide className="section" />
-          <TheWork />
+          <TheWork fullpageApi={fullpageApi}/>
           <AboutScott className="section" />
           <ContactSlide />
         

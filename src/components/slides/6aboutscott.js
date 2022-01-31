@@ -3,6 +3,7 @@ import React from 'react'
 import ReactCircleModal from 'react-circle-modal'
 
 const AboutScott = () => {
+  
     return (     
     <div className="section Fith"> 
            <div id="scottBkgDiv">
