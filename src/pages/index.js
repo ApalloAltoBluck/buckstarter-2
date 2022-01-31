@@ -60,10 +60,11 @@ function IndexPage(props) {
   <Layout>
     <Header isFirstPage={isOpen}></Header>
     <Seo title="Buckstarter" />
-    <section className="py-5 text-center container">
+    <section className="py-5 text-center">
         <ReactFullpage
     //fullpage options
     licenseKey = {'YOUR_KEY_HERE'}
+    scro
     scrollingSpeed = {1000} /* Options here */
     render={({ state, fullpageApi }) => {
       return (
@@ -72,7 +73,7 @@ function IndexPage(props) {
           <AboutBS  className="section"/>
           <Service  className="section"/>
           <HiveSlide className="section" />
-          <TheWork fullpageApi={fullpageApi}/>
+          <TheWork className="section" fullpageApi={fullpageApi}/>
           <AboutScott className="section" />
           <ContactSlide />
         

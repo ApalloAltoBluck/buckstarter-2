@@ -24,6 +24,9 @@ const ContactSlide = () => {
       </div>
         </div>
       </div> )}
+
+      
 export default ContactSlide
+
 
 
