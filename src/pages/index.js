@@ -37,8 +37,8 @@ import "../components/fullpage.css";
 
 const Header = () => {
   return (
-    <div className="static w-full">
-    <img className=" mx-auto w-1/5 md:w-1/12 z-10" src={'/logo.jpg'} />
+    <div className="static w-full z-30">
+    <img className=" mx-auto w-1/5 md:w-1/12 z-10 " src={'/logo.jpg'}  />
     <Burger right/>
 
     </div>
@@ -47,7 +47,7 @@ const Header = () => {
 }
 
 
-function IndexPage(props ) {
+function IndexPage(props) {
 
   const [firstPage, setFirstPage] = useState();
   const [isOpen, setIsOpen] = useState(false);

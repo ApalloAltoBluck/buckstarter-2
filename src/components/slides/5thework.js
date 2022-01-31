@@ -6,7 +6,7 @@ const TheWork = () => {
     return (  
         <div className="section container">
             <div className="page Fourth">
-              <div className="thework">
+              <div className="">
               <h2>The Work</h2>
               <p className="text-style-1">Why should a brand exist? What purpose does it serve? Where is its heat? This is a craft of careful identification and distillation. Our work shares three common principles:</p>
               </div>

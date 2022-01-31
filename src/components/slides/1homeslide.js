@@ -3,11 +3,17 @@ import React from 'react'
 import ReactCircleModal from 'react-circle-modal'
 
 const HomeSlide = () => {
-    return (          <div className="section">
+    return (
+    
+    <div className="section">
     <div className="bg-white page ">
-    <span class="helper"></span>
-      <p>welcome to</p>
-        <img className="slide-1-image" src={'buckstarter.png'} />
+      <div class="pt-40 lg:pt-2">
+        <p>welcome to</p>
+          <img className="slide-1-image" src={'buckstarter.png'} />
+        </div>
       </div>
-    </div>) }
+    </div>
+    
+    ) 
+  }
 export default HomeSlide
