@@ -7,8 +7,8 @@ const AboutScott = () => {
     return (     
     <div className="section Fith"> 
            <div id="scottBkgDiv">
-    <div id="scottPfp">
-      <StaticImage src="../images/scott.jpeg" alt="Scott" id="pfp" className="imageround"/>
+    <div id="w-full">
+      <StaticImage src=".src//images/scott.jpeg" alt="Scott" id="pfp"/>
     </div>
   </div></div> )}
 export default AboutScott

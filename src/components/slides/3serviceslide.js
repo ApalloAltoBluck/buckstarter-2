@@ -8,7 +8,7 @@ import production from "../../images/production.png"
 
 const ServiceSlide = () => {
     return ( <div className="section h-screen">
-        <div className="mx-5 mt-16 md:mt-16 lg:mt-36">
+        <div className="mx-5 mt- md:mt-16 lg:mt-36">
        <h2 className="text-2xl md:text-4xl lg:text-6xl">We organize around your needs.</h2>
         <div className="flex flex-col lg:flex-row">
           <figure className="w-full ">

@@ -37,8 +37,8 @@ import "../components/fullpage.css";
 
 const Header = () => {
   return (
-    <div className="static w-full z-30">
-    <img className=" mx-auto w-1/5 md:w-1/12 z-10 " src={'/logo.jpg'}  />
+    <div className="static z-30">
+    <img className="mx-auto w-1/5 md:w-1/12 z-10 " src={'/logo.jpg'}  />
     <Burger right/>
 
     </div>
@@ -58,28 +58,29 @@ function IndexPage(props) {
 
   return (
   <Layout>
-    <Header isFirstPage={isOpen}></Header>
+    {/* <Header className="z-10" isFirstPage={isOpen}></Header> */}
     <Seo title="Buckstarter" />
-    <section className="py-5 text-center">
+    <section className=" text-center z-1">
         <ReactFullpage
     //fullpage options
     licenseKey = {'YOUR_KEY_HERE'}
     scro
     scrollingSpeed = {1000} /* Options here */
+
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-          <HomeSlide className="section" />
-          <AboutBS  className="section"/>
+          <HomeSlide className="section" data-anchor="Home" />
+          <AboutBS  className="section" />
           <Service  className="section"/>
           <HiveSlide className="section" />
-          <TheWork className="section" fullpageApi={fullpageApi}/>
+          <TheWork className="section" fullpageApi={fullpageApi} data-anchor="TheWork"/>
           <AboutScott className="section" />
-          <ContactSlide />
+          <ContactSlide data-anchor="Contact" />
         
 
           
-          <div className="section">
+          {/* <div className="section">
             <div className="page Seventh">
               <h2>Case Studies</h2>
               <Container fluid="md">
@@ -116,7 +117,7 @@ function IndexPage(props) {
               <h2>We are Buckstarter: Sizzle reel</h2>
               <p>As a branding studio, we relentlessly focus on the end-product: the quality of the output. We cherry-pick the best designers, strategists, creative directors, media planners or buyers, producers, or directors needed to get the job done well. We "swarm" just the right talent around the brand. And we work fast, with little to no waste.</p>
             </div>
-          </div>
+          </div> */}
           
         </ReactFullpage.Wrapper>
       );

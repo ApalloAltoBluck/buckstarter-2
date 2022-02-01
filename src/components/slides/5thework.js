@@ -17,12 +17,16 @@ const Client = (props) => {
 const ClientPopup = (props) => {
   
   return (props.client && <div className="section">
-    <div className="" >
-          <div className="bg-gray-300 w-screen left-0 h-1/2 p-10" id="bottom">
-              <GatsbyImage className="mx-auto h-44 md:w-2/5 shadow-xl" image={props.client.image}/>
+    <div className="h-screen" >
+          <div className=" bg-gray-200 py-4 border border-black w-screen " id="bottom">
+                <div className="flex">
+                  <GatsbyImage className="drop-shadow-2xl max-w-screen-sm px-10 mx-auto" image={props.client.image}/>
+                </div>
               </div>
-              <h2 id="Name">{props.client.title} </h2>
-              <p id="description">{props.client.description}</p>
+              <div className="h-2/4 container mt-5">
+                <h2 id="Name" className='text-center'>{props.client.title} </h2>
+                <p id="description" className='text-xl leading-loose md:text-3xl md:leading-loose lg:text-xl lg:leading-loose'>{props.client.description}</p>
+              </div>
     </div></div>)
     }
 

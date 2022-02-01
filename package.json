@@ -8,6 +8,7 @@
     "@fullpage/react-fullpage": "^0.1.19",
     "@popperjs/core": "^2.11.2",
     "bootstrap": "^5.0.1",
+    "dotenv": "^15.0.0",
     "gatsby": "^3.14.6",
     "gatsby-plugin-gatsby-cloud": "^2.6.1",
     "gatsby-plugin-image": "^1.6.0",

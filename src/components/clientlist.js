@@ -22,12 +22,11 @@ const ClientList = (props) => {
   }
 `)
   return(<div  className="flex flex-row">
-  {data.allGraphCmsClient.edges.map((client, index) => (<div>
+  {data.allGraphCmsClient.edges.map((client, index) => (<div className=" mx-auto my-10">
         <h1>{client.node.clientName}</h1>
-        <GatsbyImage onClick={() => {props.setClient({title: client.node.clientName, description: client.node.description, image: client.node.iconPhoto.gatsbyImageData}); props.fullpageApi.moveSectionDown();}} className="w-32 object-fill" image={client.node.iconPhoto.gatsbyImageData} />
+        <GatsbyImage onClick={() => {props.setClient({title: client.node.clientName, description: client.node.description, image: client.node.iconPhoto.gatsbyImageData }); props.fullpageApi.moveSectionDown();}} className="w-32 object-fill" image={client.node.iconPhoto.gatsbyImageData} />
         </div>
     ))}
-}
 </div>)
 }
 
