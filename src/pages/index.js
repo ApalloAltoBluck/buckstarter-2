@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React, { useEffect, useState } from "react"
 import 'react-bootstrap';
-import { Container, Component } from 'react-bootstrap';
+import { Container, Component, Navbar } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import Figure from 'react-bootstrap/Figure'
@@ -35,11 +35,12 @@ import Seo from "../components/seo"
 import "../components/fullpage.css";
 
 
-const Header = () => {
+
+const Header = (props) => {
   return (
-    <div className="static z-30">
-    <img className="mx-auto w-1/5 md:w-1/12 z-10 " src={'/logo.jpg'}  />
-    <Burger right/>
+    <div className="sticky z-30">
+    {/* <img className="mx-auto w-1/5 md:w-1/12 z-10 " src={'/logo.jpg'}  /> */}
+    <Burger fullpageApi={props.fullpageApi} right/>
 
     </div>
 
@@ -47,10 +48,12 @@ const Header = () => {
 }
 
 
+
 function IndexPage(props) {
 
   const [firstPage, setFirstPage] = useState();
   const [isOpen, setIsOpen] = useState(false);
+  const [fullpageApi, setfullpageApi] = useState(null);
 
   const imageClick = () => {
     console.log('Click');
@@ -58,18 +61,19 @@ function IndexPage(props) {
 
   return (
   <Layout>
-    {/* <Header className="z-10" isFirstPage={isOpen}></Header> */}
+    {/* <Header className="z-10" isFirstPage={isOpen} fullpageApi={fullpageApi} ></Header> */}
     <Seo title="Buckstarter" />
     <section className=" text-center z-1">
         <ReactFullpage
     //fullpage options
     licenseKey = {'YOUR_KEY_HERE'}
-    scro
-    scrollingSpeed = {1000} /* Options here */
+    scrollingSpeed = {0} /* Options here */
 
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
+          <Navbar></Navbar>
+          <Header className="z-10 sticky" isFirstPage={isOpen} setfullpageApi={fullpageApi} ></Header>
           <HomeSlide className="section" data-anchor="Home" />
           <AboutBS  className="section" />
           <Service  className="section"/>
