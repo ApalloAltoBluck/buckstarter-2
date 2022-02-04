@@ -7,7 +7,7 @@ const ContactSlide = () => {
         <div className="section">
         <div className="page Sixth ">
           <h2 className='text-2xl md:text-4xl lg:text-6xl'>Get in contact</h2>
-          <p className='pt-10 text-xl leading-loose md:text-3xl md:leading-loose lg:text-4xl lg:leading-loose lg:mx-30'>Thanks for visiting. We'd love to hear from you. Better yet, we'd love to work with you. Use the form below and we will quickly get back to you. Let's get started!</p>
+          <p className='pt-10 text-xl leading-loose md:text-3xl md:leading-loose lg:text-3xl lg:leading-normal'>Thanks for visiting. We'd love to hear from you. Better yet, we'd love to work with you. Use the form below and we will quickly get back to you. Let's get started!</p>
           <div className='contact'>
         <form /*onSubmit={onSubmit}*/ className='text-base md:text-2xl lg:text-2xl'>
           <p >Your Email</p>
