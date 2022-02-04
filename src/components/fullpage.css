@@ -343,7 +343,7 @@ html.fp-enabled,
 }
 .Fifth{
     /* The image used */
-    background-image: url("../images/scott-bkg.png");
+    /* background-image: url("../../scott-bkg.png"); */
     
     
     /* Create the parallax scrolling effect */
