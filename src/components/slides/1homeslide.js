@@ -8,7 +8,7 @@ const HomeSlide = () => {
     <div className="section">
     <div className="bg-white page ">
       <div class=" pt-44 md:ml-0 ">
-        <p>welcome to</p>
+        <p className='lg:text-3xl'>welcome to</p>
           <img className=" lg:w-1/3 mx-auto" src={'buckstarter.png'} />
         </div>
       </div>

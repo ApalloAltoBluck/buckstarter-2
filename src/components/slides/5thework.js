@@ -20,7 +20,7 @@ const ClientPopup = (props) => {
     <div className="h-screen" >
           <div className=" bg-gray-200 py-4 border border-black w-screen " id="bottom">
                 <div className="flex">
-                  <GatsbyImage className="drop-shadow-2xl px-10 mx-auto" image={props.client.image}/>
+                  <GatsbyImage className="drop-shadow-2xl px-10 w-1/4 h-full mx-auto" image={props.client.image}/>
                 </div>
               </div>
               <div className="h-2/4 container mt-5">
