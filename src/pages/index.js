@@ -61,21 +61,19 @@ function IndexPage(props) {
 
   return (
   <Layout>
-    {/* <Header className="z-10" isFirstPage={isOpen} fullpageApi={fullpageApi} ></Header> */}
+    <Header className="z-10" isFirstPage={isOpen} fullpageApi={fullpageApi} ></Header>
     <Seo title="Buckstarter" />
     <section className=" text-center z-1">
         <ReactFullpage
     //fullpage options
     licenseKey = {'YOUR_KEY_HERE'}
-    scrollingSpeed = {0} /* Options here */
+    scrollingSpeed = {1000} /* Options here */
 
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
-          <Navbar></Navbar>
-          <Header className="z-10 sticky" isFirstPage={isOpen} setfullpageApi={fullpageApi} ></Header>
           <HomeSlide className="section" data-anchor="Home" />
-          <AboutBS  className="section" />
+          <AboutBS  className="section" fullpageApi={fullpageApi} />
           <Service  className="section"/>
           <HiveSlide className="section" />
           <TheWork className="section" fullpageApi={fullpageApi} data-anchor="TheWork"/>

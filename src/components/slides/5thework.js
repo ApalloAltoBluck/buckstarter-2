@@ -37,13 +37,13 @@ export default function TheWork (props)  {
 
     return (  <>
         <div className="section container">
-            <div className="page Fourth">
+            <div className="page Fourth mt-20 -mx-10">
               <div className="">
-              <h2>The Work</h2>
-              <p className="text-style-1">Why should a brand exist? What purpose does it serve? Where is its heat? This is a craft of careful identification and distillation. Our work shares three common principles:</p>
+              <h2 className='text-2xl md:text-4xl lg:text-6xl'>The Work</h2>
+              <p className=" mx-14 mt-10 text-xl leading-loose md:mx-0 md:text-3xl md:leading-loose lg:text-4xl lg:leading-loose">Why should a brand exist? What purpose does it serve? Where is its heat? This is a craft of careful identification and distillation. Our work shares three common principles:</p>
               </div>
-              <h3>Simplicity, Clarity, Allure.</h3>
-              <div className="clients">
+              <h3 className='mt-10 text-xl leading-loose md:text-3xl md:leading-loose lg:text-4xl lg:leading-loose'>Simplicity, Clarity, Allure.</h3>
+              <div className="clients mr-10">
                 <ClientList fullpageApi={props.fullpageApi} setClient={setClient} />
                 
 
