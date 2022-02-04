@@ -29,7 +29,7 @@ const Header = (props) => {
   return (
     <div className="sticky z-30">
     {/* <img className="mx-auto w-1/5 md:w-1/12 z-10 " src={'/logo.jpg'}  /> */}
-    <Burger fullpageApi={props.fullpageApi} right/>
+    {/* <Burger fullpageApi={props.fullpageApi} right/> */}
 
     </div>
 
