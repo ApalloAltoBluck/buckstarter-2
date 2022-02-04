@@ -31,8 +31,8 @@ const ClientPopup = (props) => {
     return (
     <div className="section">
     <div className="h-screen" >
-          <div className=" bg-gray-200 py-4 border border-black w-screen h-1/2" id="bottom">
-                <div className="flex"><iframe className="mx-auto shadow-xl" src="https://player.vimeo.com/video/445284854?h=03b8158984" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+          <div className=" bg-gray-200 h-1/2 border border-black w-screen" id="bottom">
+                <div className="flex py-24"><iframe className="mx-auto " src="https://player.vimeo.com/video/445284854?h=03b8158984" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
                 </div>
                 <div className="h-2/4 container mt-5">
                 <h2 id="Name" className='text-center'>We are Buckstarter (sizzle reel)</h2>
@@ -45,7 +45,7 @@ const ClientPopup = (props) => {
   
   return (props.client && <div className="section">
     <div className="h-screen" >
-          <div className=" bg-gray-200 py-4 border border-black w-screen h-1/3" id="bottom">
+          <div className=" bg-gray-200 h-1/2 py-4 border border-black w-screen h-1/2" id="bottom">
                 <div className="flex">
                 <Swiper
       spaceBetween={50}
@@ -58,14 +58,14 @@ const ClientPopup = (props) => {
     >
   {props.client.gallery && props.client.gallery.map((client, index) => (<div className=" mx-auto my-10">
         <SwiperSlide>
-        <GatsbyImage imgStyle={{objectFit: 'contain'}} className="w-3/4 sm:w-1/2 md:w-1/5"  image={client.gatsbyImageData} />
+        <GatsbyImage imgStyle={{objectFit: 'contain'}} className=" py-10 w-3/4 sm:w-1/2 md:w-1/5"  image={client.gatsbyImageData} />
         </SwiperSlide>
 
         </div>
     ))}
         </Swiper>
         {
-                    props.image && <GatsbyImage className="drop-shadow-2xl w-1/6 px-10 mx-auto" image={props.client.image}/>
+                    props.image && <GatsbyImage className="drop-shadow-3xl w-1/6 px-10 mx-auto" image={props.client.image}/>
                 }
                 </div>
               </div>
