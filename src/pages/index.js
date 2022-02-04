@@ -56,8 +56,8 @@ function IndexPage(props) {
         <ReactFullpage
     //fullpage options
     licenseKey = {'YOUR_KEY_HERE'}
-    scrollingSpeed = {0} /* Options here */
-
+    navigation
+    scrollOverflow
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>
