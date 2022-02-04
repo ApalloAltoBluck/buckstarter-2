@@ -1,13 +1,6 @@
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import React, { useEffect, useState } from "react"
-import 'react-bootstrap';
-import { Container, Component, Navbar } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import Figure from 'react-bootstrap/Figure'
-import FigureImage from 'react-bootstrap/FigureImage'
-import FigureCaption from 'react-bootstrap/FigureCaption'
 import Burger from "../components/burger"
 
 import PopupWindow from '../components/PopUp.js';
@@ -19,18 +12,14 @@ import HiveSlide from "../components/slides/4hiveslide"
 import TheWork from "../components/slides/5thework"
 import AboutScott from "../components/slides/6aboutscott"
 import ContactSlide from "../components/slides/7contactslide"
-
-import SIGPopupWindow from '../components/SIGpopup.js';
-import Popup from 'reactjs-popup';
-// import * as PopUp from "../components/PopUp.js"; 
+import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 
 import ReactFullpage from '@fullpage/react-fullpage';
 
-import CaseStudy from "../components/caseStudies";
+
+
 import Layout from "../components/layout"
-import Contact from "../components/Contact"
-// import { useState } from 'react';
-// import { send } from 'emailjs-com';
+
 import Seo from "../components/seo"
 import "../components/fullpage.css";
 
@@ -67,8 +56,8 @@ function IndexPage(props) {
         <ReactFullpage
     //fullpage options
     licenseKey = {'YOUR_KEY_HERE'}
-    scrollingSpeed = {1000} /* Options here */
-
+    navigation
+    scrollOverflow
     render={({ state, fullpageApi }) => {
       return (
         <ReactFullpage.Wrapper>

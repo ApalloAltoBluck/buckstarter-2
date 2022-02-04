@@ -1,4 +1,3 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react'
 import { graphql } from "gatsby"
 import { useState } from 'react';
@@ -18,9 +17,11 @@ const ClientPopup = (props) => {
   
   return (props.client && <div className="section">
     <div className="h-screen" >
-          <div className=" bg-gray-200 py-4 border border-black w-screen " id="bottom">
-                <div className="flex">
-                  <GatsbyImage className="drop-shadow-2xl px-10 mx-auto" image={props.client.image}/>
+          <div className=" bg-gray-200 py-4 border border-black w-screen h-1/2" id="bottom">
+                <div className="flex">{
+                    props.image &&                   <GatsbyImage className="drop-shadow-2xl w-1/6 px-10 mx-auto" image={props.client.image}/>
+
+                }
                 </div>
               </div>
               <div className="h-2/4 container mt-5">
