@@ -12,7 +12,6 @@ import HiveSlide from "../components/slides/4hiveslide"
 import TheWork from "../components/slides/5thework"
 import AboutScott from "../components/slides/6aboutscott"
 import ContactSlide from "../components/slides/7contactslide"
-import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 
 import ReactFullpage from '@fullpage/react-fullpage';
 
@@ -55,7 +54,7 @@ function IndexPage(props) {
     <section className=" text-center z-1">
         <ReactFullpage
     //fullpage options
-    licenseKey = {'YOUR_KEY_HERE'}
+    licenseKey = {'DE1AD8E3-6F4E43A9-B6863C59-E2BF978C'}
     navigation
     scrollOverflow
     render={({ state, fullpageApi }) => {
