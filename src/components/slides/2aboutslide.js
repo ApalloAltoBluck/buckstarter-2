@@ -5,14 +5,11 @@ import ReactCircleModal from 'react-circle-modal'
 const AboutBS = (props) => {
     return (  
     <div className="section">     
-    <div className=" mx-5  mt-40 md:mx-52 md:mt-64 lg:mt-80" >
-    <p className="text-xl leading-loose  md:text-3xl md:leading-loose lg:text-4xl lg:leading-loose">Buckstarter helps get brands moving. We give businesses stronger points-of-view and bigger presences in the marketplace, so they become more effective. We deliver deep branding experience in a more efficient operating model we call a “branding studio” rather than an “advertising agency”.</p>
-    {/* <button onClick={() => fullpageApi.moveSectionDown()}>
-      Click me to move down
-    </button> */}
+    <div className="flex flex-col align-middle table-cell" >
+    <p className="text-xl leading-loose  md:text-3xl md:w-1/2 mx-auto md:leading-normal lg:text-3xl lg:leading-normal">Buckstarter helps get brands moving. We give businesses stronger points-of-view and bigger presences in the marketplace, so they become more effective. We deliver deep branding experience in a more efficient operating model we call a “branding studio” rather than an “advertising agency”.</p>
     <div class="pt-3">
-      <button className='button bg-black text-white bold px-3 py-1 rounded-xl text-lg' onClick={() => props.fullpageApi.moveTo(6, 0)}>
-        WATCH OUR SIZZLE REEL
+      <button className='button bg-black text-white bold px-3 py-2 rounded-xl text-lg' onClick={() => props.fullpageApi.moveTo(6, 0)}>
+        WATCH SIZZLE REEL
       </button>
     </div>
 
