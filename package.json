@@ -31,7 +31,8 @@
     "react-full-screen": "^1.1.0",
     "react-helmet": "^6.1.0",
     "reactjs-popup": "^2.0.5",
-    "sass": "1.32.13"
+    "sass": "1.32.13",
+    "swiper": "^8.0.3"
   },
   "devDependencies": {
     "prettier": "2.2.1",
