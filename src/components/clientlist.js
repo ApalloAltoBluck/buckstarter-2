@@ -61,28 +61,29 @@ const ClientList = (props) => {
         // when window width is >= 640px
         640: {
           slidesPerView: 3,
-          spaceBetween: 40,
+          spaceBetween: 20,
           freeMode:false,
+          
         }
       }}
     >
       <SwiperSlide>
       <h1 className="text-2xl">Sizzle Reel</h1>
-      <div onClick={() => {props.setClient(null); props.fullpageApi.moveSectionDown();}} className="hover:shadow-xl hover:cursor-grab"  >
-        <img className="w-32 h-full object-fill mx-auto" src={'logo.jpg'} />
+      <div onClick={() => {props.setClient(null); props.fullpageApi.moveSectionDown();}} className=" my-auto hover:cursor-grab"  >
+        <img className="w-32 h-full object-fill mx-auto pt-3 mb-14 lg:mb-20 lg:pt-3" src={'logo.jpg'} />
 </div>
 
       </SwiperSlide>
-  {data.allGraphCmsClient.edges.map((client, index) => (<div className=" mx-auto my-10">
+  {data.allGraphCmsClient.edges.map((client, index) => (<div className=" mx-auto my-10 lg:my-22">
         <SwiperSlide>
         <h1 className="text-2xl">{client.node.clientName}</h1>
-        <div className="hover:shadow-xl hover:cursor-grab"  >
+        <div className=" hover:cursor-grab"  >
         <GatsbyImage onClick={() => {props.setClient({title: client.node.clientName, description: client.node.description, image: client.node.iconPhoto.gatsbyImageData, gallery: client.node.gallery}); props.fullpageApi.moveSectionDown();}} className="w-32 object-fill" image={client.node.iconPhoto.gatsbyImageData} />
         </div>
         </SwiperSlide>
 
         </div>
-    ))}
+    ))} 
         </Swiper>
 
 </div></> )

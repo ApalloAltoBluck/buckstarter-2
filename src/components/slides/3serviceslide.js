@@ -20,7 +20,7 @@ const ServiceSlide = () => {
             <p className="text-center md:text-left md:text-2xl">Content production: digital, <br></br> video, print, ultra-efficent</p>
           </figure>
           <figure  className="w-full">
-          <img className="w-80 md:w-3/4" src={production} alt="Buckstarter production" />
+          <img className=" md:w-3/4" src={production} alt="Buckstarter production" />
             <p className="text-center md:text-left md:text-2xl">Content production: digital, video, print, ultra-efficient
 </p>
           </figure>

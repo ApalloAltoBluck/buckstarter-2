@@ -32,7 +32,7 @@ const ClientPopup = (props) => {
     <div className="section">
     <div className="h-screen" >
           <div className=" bg-gray-200 h-1/2 border border-black w-screen" id="bottom">
-                <div className="flex py-24"><iframe className="mx-auto " src="https://player.vimeo.com/video/445284854?h=03b8158984" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                <div className="flex mt-4 lg:mt-24 "><iframe className="mx-auto " src="https://player.vimeo.com/video/445284854?h=03b8158984" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
                 </div>
                 <div className="h-2/4 container mt-5">
                 <h2 id="Name" className='text-center'>We are Buckstarter (sizzle reel)</h2>
@@ -65,7 +65,7 @@ const ClientPopup = (props) => {
     ))}
         </Swiper>
         {
-                    props.image && <GatsbyImage className="drop-shadow-3xl w-1/6 px-10 mx-auto" image={props.client.image}/>
+                    props.image && <GatsbyImage className=" w-1/6 px-10 mx-auto" image={props.client.image}/>
                 }
                 </div>
               </div>
