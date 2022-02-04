@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import { Navigation, Pagination, A11y } from 'swiper';
+import { Navigation, Pagination, A11y, FreeMode } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/css/navigation';
@@ -30,18 +30,49 @@ const ClientList = (props) => {
     }
   }
 `)
-  return(         <>  <h1 className="text-2xl md:text-3xl mt-10 lg:text-4xl">Case Studies</h1>
+
+  return(         <>  <h1 className="header-portion pt-8"><b>Case Studies</b></h1>
     <div  className="flex flex-row">
 
     <Swiper
       spaceBetween={50}
       slidesPerView={2}
-      modules={[Navigation, Pagination, A11y]}
+      className="w-screen mx-auto"
+      modules={[Navigation, Pagination, A11y, FreeMode]}
       spaceBetween={50}
-      navigation
+      freeMode
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
+      initialSlide={1}
+      autoPlay
+      breakpoints= {{
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 'auto',
+          navigation:false,
+          freeMode:true,
+          spaceBetween: 0        
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+          freeMode:false,
+        }
+      }}
     >
+      <SwiperSlide>
+      <h1 className="text-2xl">Sizzle Reel</h1>
+      <div onClick={() => {props.setClient(null); props.fullpageApi.moveSectionDown();}} className="hover:shadow-xl hover:cursor-grab"  >
+        <img className="w-32 h-full object-fill mx-auto" src={'logo.jpg'} />
+</div>
+
+      </SwiperSlide>
   {data.allGraphCmsClient.edges.map((client, index) => (<div className=" mx-auto my-10">
         <SwiperSlide>
         <h1 className="text-2xl">{client.node.clientName}</h1>

@@ -9,7 +9,7 @@ import production from "../../images/production.png"
 const ServiceSlide = () => {
     return ( <div className="section h-screen">
         <div className="flex table-cell my-auto align-middle ">
-       <h2 className="text-2xl md:text-4xl lg:text-4xl tracking-normal mx-14">We organize around your needs.</h2>
+       <h2 className="header-portion">We organize around your needs.</h2>
         <div className="flex flex-col mx-14 lg:ml- lg:flex-row md:mt-28">
           <figure className="w-full ">
             <img className="md:w-3/4" src={innovation} alt="Buckstarter innovation" />
