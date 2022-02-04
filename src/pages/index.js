@@ -12,7 +12,6 @@ import HiveSlide from "../components/slides/4hiveslide"
 import TheWork from "../components/slides/5thework"
 import AboutScott from "../components/slides/6aboutscott"
 import ContactSlide from "../components/slides/7contactslide"
-import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
 
 import ReactFullpage from '@fullpage/react-fullpage';
 
