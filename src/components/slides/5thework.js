@@ -3,6 +3,18 @@ import { graphql } from "gatsby"
 import { useState } from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import ClientList from "../clientlist"
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+import { Navigation, Pagination, A11y } from 'swiper';
+
+// Import Swiper styles
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+// Import Swiper styles
+import 'swiper/css';
 
 const Client = (props) => {
   return (
@@ -18,15 +30,33 @@ const ClientPopup = (props) => {
   return (props.client && <div className="section">
     <div className="h-screen" >
           <div className=" bg-gray-200 py-4 border border-black w-screen h-1/2" id="bottom">
-                <div className="flex">{
-                    props.image &&                   <GatsbyImage className="drop-shadow-2xl w-1/6 px-10 mx-auto" image={props.client.image}/>
+                <div className="flex">
+                <Swiper
+      spaceBetween={50}
+      slidesPerView={1}
+      modules={[Navigation, Pagination, A11y]}
+      spaceBetween={50}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+    >
+  {props.client.gallery && props.client.gallery.map((client, index) => (<div className=" mx-auto my-10">
+        <SwiperSlide>
+        {console.log(client)}
+        <GatsbyImage className="h-1/4" objectFit="scale" image={client.gatsbyImageData} />
+        </SwiperSlide>
 
+        </div>
+    ))}
+        </Swiper>
+        {
+                    props.image && <GatsbyImage className="drop-shadow-2xl w-1/6 px-10 mx-auto" image={props.client.image}/>
                 }
                 </div>
               </div>
               <div className="h-2/4 container mt-5">
                 <h2 id="Name" className='text-center'>{props.client.title} </h2>
-                <p id="description" className='text-xl leading-loose md:text-3xl md:leading-loose lg:text-xl lg:leading-loose'>{props.client.description}</p>
+                <p id="description" className='text-md leading-loose md:text-3xl md:leading-loose lg:text-xl lg:leading-loose'>{props.client.description}</p>
               </div>
     </div></div>)
     }
